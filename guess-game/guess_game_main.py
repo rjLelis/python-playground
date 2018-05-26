@@ -1,13 +1,14 @@
 from random import randint
 from guess_game import game
 
+
 def main():
     guess = None
     guessed_times = 0
-    number = randint(0,10)
+    number = randint(0, 10)
     not_finished = True
     while not_finished:
-        guess = int(input('Guess the number between 0 and 10: ')) 
+        guess = int(input('Guess the number between 0 and 10: '))
         returned = game(guess, number)
         if returned > 0:
             print('Guessed higher')

@@ -12,12 +12,14 @@ def reverse(string):
     ''' Reverses a string'''
     return string[::-1]
 
+
 def palindrome_test(word):
     ''' Returns true if a word is palindrome '''
     if remove_special_char(word) == reverse(remove_special_char(word)):
         return True
     else:
         return False
+
 
 def main():
     test = palindrome_test(input("Type a word to test if it is palindrome: "))
@@ -26,6 +28,6 @@ def main():
     else:
         print(f"The word isn't palindrome")
 
+
 if __name__ == '__main__':
     main()
-

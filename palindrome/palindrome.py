@@ -15,10 +15,7 @@ def reverse(string):
 
 def palindrome_test(word):
     ''' Returns true if a word is palindrome '''
-    if remove_special_char(word) == reverse(remove_special_char(word)):
-        return True
-    else:
-        return False
+    return remove_special_char(word) == reverse(remove_special_char(word))
 
 
 def main():

@@ -1,2 +1,5 @@
+### VS CODE ###
 .vscode/
+
+### Python ###
 __pycache__/

@@ -10,3 +10,4 @@ You try to guess a number between 0 and 10
 * random numbers
 * imports
 * `f` strings
+* try/except

@@ -4,6 +4,7 @@ import grocery_list_repository
 
 def main():
     option = 0
+    items = grocery_list_repository.read()
     while True:
         print("1 - Add item to the list")
         print("2 - Update item from the list")
@@ -19,10 +20,10 @@ def main():
         elif option == 2:
             item = input("Enter the item you want to replace: ")
             new_item = input("Enter the new item to store on the list: ")
-            grocery_list.alter(item, new_item)
+            grocery_list_repository.update(item, new_item)
         elif option == 3:
             item = input("Enter the item you want to remove: ")
-            grocery_list.exclude(item)
+            grocery_list_repository.delete(item)
         elif option == 4:
             print("Items - ")
             print(grocery_list_repository.read())

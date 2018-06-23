@@ -1,6 +1,6 @@
-# Grocery shopping[WIP]
+# Grocery shopping
 
-You enter with items to be store in a `.data` file
+Store grocery items in a `.data` file
 
 ### Worked concepts
 * File reading and writing

@@ -19,11 +19,12 @@ def palindrome_test(word):
 
 
 def main():
-    test = palindrome_test(input("Type a word to test if it is palindrome: "))
-    if test:
-        print(f"The word is palindrome")
+    is_palindrome = \
+        palindrome_test(input("Type a word to test if it is palindrome: "))
+    if is_palindrome:
+        print("The word typed is palindrome")
     else:
-        print(f"The word isn't palindrome")
+        print("The word typed isn't palindrome")
 
 
 if __name__ == '__main__':

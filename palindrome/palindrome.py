@@ -15,16 +15,17 @@ def reverse(string):
 
 def palindrome_test(word):
     ''' Returns true if a word is palindrome '''
-    return remove_special_char(word) == reverse(remove_special_char(word))
+    return remove_special_char(word.lower()) == \
+        reverse(remove_special_char(word.lower()))
 
 
 def main():
     word = input("Type a word to test if it is palindrome: ")
     is_palindrome = palindrome_test(word)
     if is_palindrome:
-        print(f"The word {word} is palindrome")
+        print(f"The word '{word}' is palindrome")
     else:
-        print(f"The word {word} isn't palindrome")
+        print(f"The word '{word}' isn't palindrome")
 
 
 if __name__ == '__main__':

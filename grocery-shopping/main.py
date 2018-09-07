@@ -40,6 +40,7 @@ def main():
         print("0 - Exit")
         option = options(int(input("> ")))
         if option == 1:
+            print('Exiting program')
             break
 
 

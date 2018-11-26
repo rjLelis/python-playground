@@ -14,7 +14,7 @@ The [palindrome](/palindrome) test takes a `string` and checks if it's equals to
 The [grocery shopping](/grocery-shopping) it's a example on how to read and write python objects on files using pickle.
 
 ### Password storage [WIP]
-The [password storage](/password-store) encrypts a password using the caesar cipher(for now) and stores in a file.
+The [password storage](/password-storage) encrypts a password using the caesar cipher(for now) and stores in a file.
 
 ## Learning source
 * [A byte of python(PDF)](https://edisciplinas.usp.br/pluginfile.php/3252353/mod_resource/content/1/b_Swaroop_Byte_of_python.pdf)

@@ -13,17 +13,19 @@ def encrypt(original_message, key):
                 'u', 'v', 'w', 'x', 'y', 'z')
 
     encrypted_message = ''
+    key = alphabet.index(key)
 
     # Encrypts the original message then stores in the return variable
-    for letter in original_message:
+    for letter in original_message.lower():
         encrypted_letter = ''
-        if letter.lower() not in alphabet:
+        letter_index = alphabet.index(letter) + 1
+        if letter not in alphabet:
             encrypted_letter = letter
-        elif alphabet.index(letter) + key >= len(alphabet):
+        elif letter_index + key >= len(alphabet):
             encrypted_letter = \
-                alphabet[alphabet.index(letter) + key - len(alphabet)]
+                alphabet[letter_index + key - len(alphabet)]
         else:
-            encrypted_letter = alphabet[alphabet.index(letter) + key]
+            encrypted_letter = alphabet[letter_index + key]
         encrypted_message += encrypted_letter
 
     return encrypted_message

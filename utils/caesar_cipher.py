@@ -13,7 +13,9 @@ def encrypt(original_message, key):
                 'u', 'v', 'w', 'x', 'y', 'z')
 
     encrypted_message = ''
-    key = alphabet.index(key)
+    
+    if type(key) == str:
+        key = alphabet.index(key)
 
     # Encrypts the original message then stores in the return variable
     for letter in original_message.lower():

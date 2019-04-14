@@ -3,3 +3,8 @@
 
 ### Python ###
 __pycache__/
+venv/
+
+*.txt
+
+!requirements.txt

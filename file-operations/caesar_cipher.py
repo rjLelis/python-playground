@@ -1,3 +1,5 @@
+from file_utils import remove_accents
+
 
 def encrypt(original_message, key):
     '''
@@ -18,7 +20,7 @@ def encrypt(original_message, key):
         key = alphabet.index(key) + 1
 
     # Encrypts the original message then stores in the return variable
-    for letter in original_message.lower():
+    for letter in remove_accents(original_message.lower()):
         encrypted_letter = ''
         if letter not in alphabet:
             encrypted_letter = letter

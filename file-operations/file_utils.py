@@ -13,4 +13,4 @@ def get_file_content(file):
 def store_file_content(content, file='new_file.txt'):
     with open(file, 'w') as f:
         f.write(content)
-    return f'content stored on {file}'
+    return file

@@ -1,16 +1,55 @@
 import argparse
-from caesar_cipher import encrypt
+import caesar_cipher
 from file_utils import get_file_content, store_file_content
 
-parser = argparse.ArgumentParser(description='Takes a file as argument and encrypts it')
+def main():
 
-parser.add_argument('file', metavar='file to be encrypted', type=str)
-parser.add_argument('key', metavar='key to encrypt',type=int)
+    parser = argparse.ArgumentParser(description='Takes a file as argument and encrypts it')
 
-args = parser.parse_args()
+    parser.add_argument('file', metavar='file to be encrypted', type=str)
+    parser.add_argument('key', metavar='key to encrypt',type=int)
+    parser.add_argument('mode', metavar='Select the mode (encrypt, decrypt)', type=str)
 
-file_content = get_file_content(args.file)
+    args = parser.parse_args()
 
-new_file = store_file_content(encrypt(file_content, args.key), 'encriptado.txt')
+    try:
+        eval(args.mode)(args.file, args.key)
 
-print(f'content stored on {new_file}')
+    except NameError:
+        print(f'The mode {args.mode} does not exists')
+
+
+def encrypt(file, key):
+
+    try:
+        file_content = get_file_content(file)
+
+        if file_content:
+            new_file = store_file_content(caesar_cipher.encrypt(file_content, key), 'encriptado.txt')
+            print(f'content stored on {new_file}')
+
+        else:
+            print(f'The file {file} is empty')
+
+    except FileNotFoundError:
+        print(f'The file {file} does not exists')
+    
+
+
+def decrypt(file, key):
+    try:
+        file_content = get_file_content(file)
+
+        if file_content:
+            new_file = store_file_content(caesar_cipher.decrypt(file_content, key), 'decriptado.txt')
+            print(f'Content stored on {new_file}')
+
+        else:
+            print(f'The file {file} is empty')
+
+    except FileNotFoundError:
+        print(f'The file {file} does not exists')
+
+
+if __name__ == "__main__":
+    main()

@@ -33,6 +33,8 @@ def encrypt(file, key):
 
     except FileNotFoundError:
         print(f'The file {file} does not exists')
+    except ValueError:
+        print('The selected key does not exists in the alphabet')
     
 
 
@@ -41,7 +43,7 @@ def decrypt(file, key):
         file_content = get_file_content(file)
 
         if file_content:
-            new_file = store_file_content(caesar_cipher.decrypt(file_content, key), 'decriptado.txt')
+            new_file = store_file_content(caesar_cipher.decrypt(file_content, key), 'decripted.txt')
             print(f'Content stored on {new_file}')
 
         else:
@@ -49,6 +51,8 @@ def decrypt(file, key):
 
     except FileNotFoundError:
         print(f'The file {file} does not exists')
+    except ValueError:
+        print('The selected key does not exists in the alphabet')
 
 
 if __name__ == "__main__":

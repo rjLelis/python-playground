@@ -17,7 +17,11 @@ def encrypt(original_message, key):
     encrypted_message = ''
 
     if type(key) == str:
-        key = ALPHABET.index(key) + 1
+        try:
+            key = ALPHABET.index(key) + 1
+
+        except ValueError:
+            raise ValueError()
 
     # Encrypts the original message then stores in the return variable
     for letter in remove_accents(original_message.lower()):
@@ -46,7 +50,11 @@ def decrypt(encrypted_message, key):
     translated = ''
 
     if type(key) == str:
-        key = ALPHABET.index(key) + 1
+        try:
+            key = ALPHABET.index(key) + 1
+
+        except ValueError:
+            raise ValueError()
 
     for letter in remove_accents(encrypted_message.lower()):
         if letter in ALPHABET:

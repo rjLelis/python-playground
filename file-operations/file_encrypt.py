@@ -1,6 +1,6 @@
 import argparse
 import caesar_cipher
-from file_utils import get_file_content, store_file_content
+import file_utils
 
 def main():
 
@@ -22,10 +22,10 @@ def main():
 def encrypt(file, key):
 
     try:
-        file_content = get_file_content(file)
+        file_content = file_utils.get_file_content(file)
 
         if file_content:
-            new_file = store_file_content(caesar_cipher.encrypt(file_content, key), 'encriptado.txt')
+            new_file = file_utils.store_file_content(caesar_cipher.encrypt(file_content, key), 'encriptado.txt')
             print(f'content stored on {new_file}')
 
         else:
@@ -40,10 +40,10 @@ def encrypt(file, key):
 
 def decrypt(file, key):
     try:
-        file_content = get_file_content(file)
+        file_content = file_utils.get_file_content(file)
 
         if file_content:
-            new_file = store_file_content(caesar_cipher.decrypt(file_content, key), 'decripted.txt')
+            new_file = file_utils.store_file_content(caesar_cipher.decrypt(file_content, key), 'decripted.txt')
             print(f'Content stored on {new_file}')
 
         else:

@@ -1,10 +1,15 @@
+
+FORBIDDEN_CHARS = (".", ",", "!", ";", ":",
+        "-", "_", "?", "/", "\\", "|", "*", 
+        "+", "=", "@", "#", "$", "%", "^", 
+        "&", "(", ")", "{", "}", "[", "]", "~", "`")
+
 def remove_special_char(string):
     ''' Removes all special characters from a string '''
-    forbidden_char = (".", ",", "!", ";", ":", "-", "_", "?", "/")
     new_string = ""
-    for s in string:
-        if s not in forbidden_char:
-            new_string += s
+    for character in string:
+        if character not in FORBIDDEN_CHARS:
+            new_string += character
     return new_string
 
 

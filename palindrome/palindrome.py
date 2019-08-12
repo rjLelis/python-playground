@@ -1,9 +1,9 @@
-from string_utils import is_palindrome
+from . import string_utils
 
 
 def main():
     word = input("Type a word to test if it is palindrome: ")
-    if is_palindrome(word):
+    if string_utils.is_palindrome(word):
         print(f"The word '{word}' is palindrome")
     else:
         print(f"The word '{word}' isn't palindrome")

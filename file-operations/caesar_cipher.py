@@ -1,10 +1,8 @@
 from file_utils import remove_accents
+import string
 
 
-ALPHABET = ('a', 'b', 'c', 'd', 'e', 'f',
-                'g', 'h', 'i', 'j', 'k', 'l', 'm',
-                'n', 'o', 'p', 'q', 'r', 's', 't',
-                'u', 'v', 'w', 'x', 'y', 'z')
+ALPHABET = [letter for letter in string.ascii_lowercase]
 
 
 def encrypt(original_message, key):
@@ -44,7 +42,7 @@ def decrypt(encrypted_message, key):
     '''
         Decrypts a message using the caesar cypher
         :params encrypted_message, key
-        :returns translated        
+        :returns translated
     '''
 
     translated = ''
@@ -68,5 +66,5 @@ def decrypt(encrypted_message, key):
 
         else:
             translated += letter
-    
+
     return translated

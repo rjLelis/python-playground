@@ -24,6 +24,13 @@ The [file operations](/file-operations) encrypts a text using the caesar cipher(
 
 The [object serializer](/object-serializer) takes an object as a argument and serializes into `json`.
 
+### Socket
+
+[client]: /socket/client.py
+[server]: /socket/server.py
+
+[socket](/socket) has a [`client`][client] and a [`server`][server]. The [`client`][client] sends to the [`server`][server] a "`Hello, World`", which in return sends back to the [`client`][client] the same message.
+
 ## Learning source
 
 * [A byte of python(PDF)](https://edisciplinas.usp.br/pluginfile.php/3252353/mod_resource/content/1/b_Swaroop_Byte_of_python.pdf)
@@ -41,6 +48,8 @@ The [object serializer](/object-serializer) takes an object as a argument and se
 * [Number convertion](https://github.com/rjLelis/number-conversion)
 
 * [Code Nation Challenge](https://github.com/rjLelis/code-nation-challenge)
+
+* [Aceleração python codenation](https://github.com/rjLelis/aceleracao-python)
 
 ## Some of my Django projects
 

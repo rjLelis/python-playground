@@ -1,6 +1,8 @@
 import argparse
+
 import caesar_cipher
 import file_utils
+
 
 def main():
 
@@ -35,7 +37,7 @@ def encrypt(file, key):
         print(f'The file {file} does not exists')
     except ValueError:
         print('The selected key does not exists in the alphabet')
-    
+
 
 
 def decrypt(file, key):

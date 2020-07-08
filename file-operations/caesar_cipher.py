@@ -1,6 +1,6 @@
-from file_utils import remove_accents
 import string
 
+from file_utils import remove_accents
 
 ALPHABET = [letter for letter in string.ascii_lowercase]
 

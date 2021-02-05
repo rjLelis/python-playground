@@ -31,6 +31,10 @@ The [object serializer](/object-serializer) takes an object as a argument and se
 
 [socket](/socket) has a [`client`][client] and a [`server`][server]. The [`client`][client] sends to the [`server`][server] a "`Hello, World`", which in return sends back to the [`client`][client] the same message.
 
+## Count group
+
+The [count group](./count_group/count_group.py) counts how many times the letters repeats consecutively.
+
 ## Learning source
 
 * [A byte of python(PDF)](https://edisciplinas.usp.br/pluginfile.php/3252353/mod_resource/content/1/b_Swaroop_Byte_of_python.pdf)

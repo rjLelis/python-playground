@@ -12,22 +12,20 @@ def serialize(obj):
     return json.dumps(attributes_dict, indent=2)
 
 
-def deserialize(content, klass):
+def deserialize(content, klass, many=False):
     json_content = json.loads(content)
-    if type(json_content) == list:
-        for content in json:
-            pass
-        return
+    if many:
+        class_list = []
+        for content in json_content:
+            c = klass()
+            for key, value in content.items():
+                if hasattr(c, key):
+                    setattr(c, key, value)
+                    class_list.append(c)
+        return class_list
 
     c = klass()
     for key, value in json_content.items():
-        setattr(c, key, value)
+        if hasattr(c, key):
+            setattr(c, key, value)
     return c
-
-
-
-class Pessoa:
-
-    def __init__(self):
-        self.nome = 'Renato'
-        self.idade = 23

@@ -1,5 +1,7 @@
 
 def count_group(string: str) -> list:
+    if not string:
+        return []
     counter = 0
     group = []
     temp = string[0]

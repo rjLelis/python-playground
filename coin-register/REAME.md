@@ -6,3 +6,4 @@ Code to manipulate coins value
 
 * for loop
 * control flow
+* type annotations

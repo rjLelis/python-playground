@@ -1,6 +1,6 @@
-def num_coins(cents):
+def num_coins(cents: int) -> int:
 
-    ''' 
+    '''
         num_coins(33) == 5
         33 => 1 quarter, 1 nickel, 3 pennies => 5 coins
     '''
@@ -21,14 +21,14 @@ def num_coins(cents):
         elif remaning_coins >= 10:
             number_of_coins += 1
             remaning_coins -= 10
-        
+
         elif remaning_coins >= 5:
             number_of_coins += 1
             remaning_coins -= 5
-        
+
         elif remaning_coins >= 1:
             number_of_coins += 1
             remaning_coins -= 1
-         
+
 
     return number_of_coins

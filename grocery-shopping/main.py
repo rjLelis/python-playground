@@ -3,7 +3,7 @@ import grocery_list_repository
 items = grocery_list_repository.read()
 
 
-def options(option):
+def options(option: int):
     if option == 1:
         item = input("Enter the item: ")
         global items
